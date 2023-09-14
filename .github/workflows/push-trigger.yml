@@ -53,7 +53,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - SERVICE_LOCATION: 'print/print'
+          - SERVICE_LOCATION: 'print'
             SERVICE_NAME: 'print'
             BUILD_ARTIFACT: 'print'
       fail-fast: false
