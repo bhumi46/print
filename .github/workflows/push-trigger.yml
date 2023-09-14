@@ -49,7 +49,7 @@ jobs:
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
 
   build-dockers:
-    needs: build-maven-printr
+    needs: build-maven-print
     strategy:
       matrix:
         include:
