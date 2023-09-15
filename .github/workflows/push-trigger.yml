@@ -26,7 +26,7 @@ jobs:
     uses: mosip/kattu/.github/workflows/maven-build.yml@master
     with:
       SERVICE_LOCATION: ./
-      BUILD_ARTIFACT: print
+      BUILD_ARTIFACT: print-service
     secrets:
       OSSRH_USER: ${{ secrets.OSSRH_USER }}
       OSSRH_SECRET: ${{ secrets.OSSRH_SECRET }}
@@ -55,7 +55,7 @@ jobs:
         include:
           - SERVICE_LOCATION: 'print'
             SERVICE_NAME: 'print'
-            BUILD_ARTIFACT: 'print'
+            BUILD_ARTIFACT: 'print-service'
       fail-fast: false
     name: ${{ matrix.SERVICE_NAME }}
     uses: mosip/kattu/.github/workflows/docker-build.yml@master
