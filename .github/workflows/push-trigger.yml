@@ -53,12 +53,12 @@ jobs:
     strategy:
       matrix:
         include:
-          - SERVICE_LOCATION: 'print'
+          - SERVICE_LOCATION: './'
             SERVICE_NAME: 'print'
             BUILD_ARTIFACT: 'print-service'
       fail-fast: false
     name: ${{ matrix.SERVICE_NAME }}
-    uses: syedsalman3753/kattu/.github/workflows/docker-build.yml@MOSIP-25631
+    uses: mosip/kattu/.github/workflows/docker-build.yml@master
     with:
       SERVICE_LOCATION: ${{ matrix.SERVICE_LOCATION }}
       SERVICE_NAME: ${{ matrix.SERVICE_NAME }}
